@@ -42,7 +42,8 @@ void BucketSort(vector<double> &A)
 			
 			for (; k != --B[i].data.begin() && *k > key; --k)
 			{
-				*(++k) = *(--k);
+				auto tmp = *(--k);  
+				*(++k) = tmp;		
 			}
 			
 			*(++k) = key;
